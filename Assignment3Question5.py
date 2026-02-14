@@ -7,7 +7,7 @@ k_value_list = [1,3,5,7,9] #creation of a list to hold all of the k values.
 accuracy_result = [] #a list to hold all the accuracy results
 for num_neighbors in k_value_list:
     #trains the model for k values of 1,3,5,7,9, this is basically to see which k values
-    #results in the most accurate value for training data.
+    #results in the most accurate predictions on the test data.
     knn_model = KNeighborsClassifier(n_neighbors=num_neighbors) #sets the k value to the current iterated k value in the 1,3,5,7,9 list.
     knn_model.fit(x_train,y_train) #trains the model using the x_train and y_train data.
     y_pred = knn_model.predict(x_test) #predicts the new x values using the x_test

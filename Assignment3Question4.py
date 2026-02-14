@@ -9,7 +9,7 @@ knn_model = KNeighborsClassifier(n_neighbors=5)
 knn_model.fit(x_train,y_train)
 #trains the model using the training data from x and y train.
 
-y_pred = knn_model.predict(x_test) #uses the knn to predict the y "classification" data based off of y train data.
+y_pred = knn_model.predict(x_test) #predicts labels for the test features using the trained model
 print(f"Confusion matrix: \n{confusion_matrix(y_test,y_pred)}") #calculate the confusion matrix with confusion_matrix() to check TP,TN,FP,FN
 print(f"Accuracy: \n{accuracy_score(y_test,y_pred)}") #calculate the accuracy based off of the test data and the predicted data
 print(f"Precision: \n{precision_score(y_test,y_pred)}") #calculate the precision of the tests.

@@ -14,7 +14,7 @@ kidneyDiseaseDF.replace(binary_map,inplace=True) #replace all the non-integer va
 xLabel = kidneyDiseaseDF.drop(columns = ["classification"]) #set the x label as the matrix without the classification column
 yLabel = kidneyDiseaseDF["classification"].astype(int) #set the y label as the column of "classification"
 
-x_train, x_test, y_train, y_test = train_test_split(xLabel,yLabel,test_size=0.3,random_state = 0)
+x_train, x_test, y_train, y_test = train_test_split(xLabel,yLabel,test_size=0.3,random_state = 5)
 #split the data frame into 70% training data and 30% testing data. the random state is set to a fixed "seed" of 5.
 
 # we should not train and test a model on the same data because it will result in overfitting, where the model
